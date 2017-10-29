@@ -21,4 +21,12 @@ describe("fizzBuzzer", function () {
     });
   });
 
+  it("should return `fizz` when divisible by 3", function () {
+    let normalCases = [6, 18, 36];
+    normalCases.forEach(function (input) {
+      let answer = fizzBuzzer(input);
+      answer.should.equal("fizz");
+    });
+  });
+
 });
