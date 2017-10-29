@@ -29,6 +29,14 @@ describe("fizzBuzzer", function () {
     });
   });
 
+  it("should return the number if not divisible by 3 or 5", function () {
+    let normalCases = [8, 16, 32];
+    normalCases.forEach(function (input) {
+      let answer = fizzBuzzer(input);
+      answer.should.equal(answer);
+    });
+  });
+
   // test for edge case, input is not a number
   it("throw an Error when argument is not a number", function () {
     let edgeCases = ["hello", false, [], {}];
@@ -43,5 +51,5 @@ describe("fizzBuzzer", function () {
     2. fizzBuzzer(input).should.equal(Error)
     */
   });
-  
+
 });
