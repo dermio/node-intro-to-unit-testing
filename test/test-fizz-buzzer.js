@@ -29,4 +29,19 @@ describe("fizzBuzzer", function () {
     });
   });
 
+  // test for edge case, input is not a number
+  it("throw an Error when argument is not a number", function () {
+    let edgeCases = ["hello", false, [], {}];
+    edgeCases.forEach(function (input) {
+      (function () {
+        fizzBuzzer(input);
+      }).should.throw(Error);
+    });
+    /* Why is the fizzBuzzer function called inside an anonymous function?
+    Why do the following examples fail?:
+    1. fizzBuzzer(input).should.throw(Error)
+    2. fizzBuzzer(input).should.equal(Error)
+    */
+  });
+  
 });
